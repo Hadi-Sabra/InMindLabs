@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "ly52HPwNygAVpdKQeUKbdVZKXogmPY/eQaOk9lHSAAw=",
+  "Source": "Lab1",
+  "BasePath": "_content/Lab1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Lab1\\wwwroot",
+      "Source": "Lab1",
+      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\",
+      "BasePath": "_content/Lab1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\images\\141ddbd2-12f9-4a2a-a4ca-7ed9e84ff88f.png",
+      "SourceId": "Lab1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\",
+      "BasePath": "_content/Lab1",
+      "RelativePath": "images/141ddbd2-12f9-4a2a-a4ca-7ed9e84ff88f.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\141ddbd2-12f9-4a2a-a4ca-7ed9e84ff88f.png"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\images\\cb02cb98-cbc5-4fbf-8e83-dd98e30e6196",
+      "SourceId": "Lab1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\",
+      "BasePath": "_content/Lab1",
+      "RelativePath": "images/cb02cb98-cbc5-4fbf-8e83-dd98e30e6196",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cb02cb98-cbc5-4fbf-8e83-dd98e30e6196"
+    }
+  ]
+}
