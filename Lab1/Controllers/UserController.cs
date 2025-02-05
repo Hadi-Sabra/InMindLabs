@@ -99,6 +99,34 @@ public class UserController : ControllerBase
             return BadRequest("Invalid language format");
         }
     }
+
+    [HttpGet("dateNoInput")]
+    public string GetDateByLocale(string lang)
+    {
+        if (string.IsNullOrWhiteSpace(lang))
+            throw new ArgumentException("Language code cannot be empty");
+ 
+        try
+        {
+            var primaryLang = lang.Split(',')[0].Split('-')[0].Trim();//to take the lang only with no other attributes
+ 
+            var availableCultures = CultureInfo.GetCultures(CultureTypes.AllCultures)
+                                               .Select(c => c.TwoLetterISOLanguageName.ToLowerInvariant())
+                                               .Distinct()
+                                               .ToList();
+ 
+            if (!availableCultures.Contains(primaryLang.ToLowerInvariant()))
+                throw new ArgumentException($"Culture '{primaryLang}' is not supported");
+ 
+            var culture = CultureInfo.GetCultureInfo(primaryLang);
+            return DateTime.Now.ToString("D", culture);
+        }
+        catch (CultureNotFoundException)
+        {
+            throw new ArgumentException($"Invalid culture code: {lang}");
+        }
+    }
+
     
     [HttpPost("upload-image")]
     [Consumes("multipart/form-data")]
