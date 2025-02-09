@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ly52HPwNygAVpdKQeUKbdVZKXogmPY/eQaOk9lHSAAw=",
+  "Hash": "uwgreRh9inAE7rEOidl03H1ipXtQbKnoXzJlAoCmp5c=",
   "Source": "Lab1",
   "BasePath": "_content/Lab1",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\cb02cb98-cbc5-4fbf-8e83-dd98e30e6196"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\images\\download (1).jfif",
+      "SourceId": "Lab1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\",
+      "BasePath": "_content/Lab1",
+      "RelativePath": "images/download (1).jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\download (1).jfif"
     }
   ]
 }

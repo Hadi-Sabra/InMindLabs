@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using Lab1.Filters;
 using Lab1.Models;
 using Microsoft.AspNetCore.Mvc;
 using Lab1.Services;
@@ -10,13 +11,15 @@ namespace Lab1.Controllers;
 public class UserController : ControllerBase
 {
     private readonly IUserService _userService;
-
-    public UserController(IUserService userService)
+    private readonly ObjectMapperService _mapper;
+    public UserController(IUserService userService, ObjectMapperService mapper)
     {
         _userService = userService;
+        _mapper = mapper;
     }
 
     [HttpGet("GetUsers")]
+    [ServiceFilter(typeof(LoggingActionFilter))]
     public IActionResult GetUsers()
     {
         return Ok(_userService.GetAllUsers());
@@ -55,6 +58,7 @@ public class UserController : ControllerBase
     }
     
     [HttpPost]
+    [ServiceFilter(typeof(LoggingActionFilter))]
     public IActionResult UpdateUserById([FromBody] UpdateUserRequest newUser)
     {
         try
@@ -137,6 +141,16 @@ public class UserController : ControllerBase
         }
     }
 
+    [HttpPost("map-student-to-user")]
+    public IActionResult MapStudentToUser([FromBody] Student student)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+        
+        User user = _mapper.Map<Student, User>(student);
+
+        return Ok(user);  
+    }
 
 
 }

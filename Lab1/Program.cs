@@ -1,10 +1,23 @@
+using Lab1.Middlewares;
 using Lab1.Services;
+using Lab1.Filters;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ObjectMapperService>();
+builder.Services.AddScoped<LoggingActionFilter>();
+
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IUserService, UserService>();
+/*
+To add the filter to the whole controller: 
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<LoggingActionFilter>();
+});
+*/
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -22,6 +35,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+//Custom middlewares are inserted lastly 
+app.UseRequestLogging();
 
 app.MapControllers();
 
