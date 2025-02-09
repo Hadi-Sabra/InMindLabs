@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uwgreRh9inAE7rEOidl03H1ipXtQbKnoXzJlAoCmp5c=",
+  "Hash": "3H61zH7xgMqdCIe59YXOFKIn+MHe72e3B/+IEMsXUxc=",
   "Source": "Lab1",
   "BasePath": "_content/Lab1",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Lab1\\wwwroot",
       "Source": "Lab1",
-      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Inmind Labs\\Lab1\\Lab1\\wwwroot\\",
       "BasePath": "_content/Lab1",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\images\\141ddbd2-12f9-4a2a-a4ca-7ed9e84ff88f.png",
+      "Identity": "C:\\Users\\admin\\RiderProjects\\Inmind Labs\\Lab1\\Lab1\\wwwroot\\images\\141ddbd2-12f9-4a2a-a4ca-7ed9e84ff88f.png",
       "SourceId": "Lab1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Inmind Labs\\Lab1\\Lab1\\wwwroot\\",
       "BasePath": "_content/Lab1",
       "RelativePath": "images/141ddbd2-12f9-4a2a-a4ca-7ed9e84ff88f.png",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\images\\141ddbd2-12f9-4a2a-a4ca-7ed9e84ff88f.png"
     },
     {
-      "Identity": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\images\\cb02cb98-cbc5-4fbf-8e83-dd98e30e6196",
+      "Identity": "C:\\Users\\admin\\RiderProjects\\Inmind Labs\\Lab1\\Lab1\\wwwroot\\images\\cb02cb98-cbc5-4fbf-8e83-dd98e30e6196",
       "SourceId": "Lab1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Inmind Labs\\Lab1\\Lab1\\wwwroot\\",
       "BasePath": "_content/Lab1",
       "RelativePath": "images/cb02cb98-cbc5-4fbf-8e83-dd98e30e6196",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\images\\cb02cb98-cbc5-4fbf-8e83-dd98e30e6196"
     },
     {
-      "Identity": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\images\\download (1).jfif",
+      "Identity": "C:\\Users\\admin\\RiderProjects\\Inmind Labs\\Lab1\\Lab1\\wwwroot\\images\\download (1).jfif",
       "SourceId": "Lab1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Lab1\\Lab1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\RiderProjects\\Inmind Labs\\Lab1\\Lab1\\wwwroot\\",
       "BasePath": "_content/Lab1",
       "RelativePath": "images/download (1).jfif",
       "AssetKind": "All",
