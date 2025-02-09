@@ -1,6 +1,7 @@
 using Lab1.Middlewares;
 using Lab1.Services;
 using Lab1.Filters;
+using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ObjectMapperService>();
 builder.Services.AddScoped<LoggingActionFilter>();
+
+builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
+
 
 builder.Services.AddControllers();
 

@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using AutoMapper;
 using Lab1.Filters;
 using Lab1.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +13,12 @@ public class UserController : ControllerBase
 {
     private readonly IUserService _userService;
     private readonly ObjectMapperService _mapper;
-    public UserController(IUserService userService, ObjectMapperService mapper)
+    private readonly IMapper _imapper;
+    public UserController(IUserService userService, ObjectMapperService mapper, IMapper imapper)
     {
         _userService = userService;
         _mapper = mapper;
+        _imapper = imapper;
     }
 
     [HttpGet("GetUsers")]
@@ -176,6 +179,16 @@ public class UserController : ControllerBase
             return BadRequest(ModelState);
         
         User user = _mapper.Map<Student, User>(student);
+
+        return Ok(user);  
+    } 
+    [HttpPost("map-student-to-user-usingImapper")]
+    public IActionResult MapStudentToUserUsingImapper([FromBody] Student student)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+        
+        User user = _imapper.Map<Student, User>(student);
 
         return Ok(user);  
     }
