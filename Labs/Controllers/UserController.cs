@@ -103,9 +103,6 @@ public class UserController : ControllerBase
             return BadRequest("Invalid language format");
         }
     }
-
-   
-
     
     [HttpPost("upload-image")]
     [Consumes("multipart/form-data")]
