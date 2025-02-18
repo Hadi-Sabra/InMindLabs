@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped(typeof(ICrudService<>), typeof(CrudService<>));
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ObjectMapperService>();
@@ -17,8 +18,13 @@ builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
 
 // dotnet ef dbcontext scaffold “Host=localhost;Port=5433;Database=postgres;Username=hadi;Password=123" Npgsql.EntityFrameworkCore.PostgreSQL -o Models 
 
-builder.Services.AddDbContext<LibrarydbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("Host=localhost;Port=5433;Database=postgres;Username=hadi;Password=123")));
+// builder.Services.AddDbContext<LibrarydbContext>(options =>
+//   options.UseNpgsql(builder.Configuration.GetConnectionString("Host=localhost;Port=5433;Database=librarydb;Username=hadi;Password=123")));
+
+builder.Services.AddDbContext<UniversitydbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Host=localhost;Port=5433;Database=Universitydb;Username=hadi;Password=123")));
+
+
 
 builder.Services.AddControllers()
     .AddOData(opt => opt.Select().Filter().OrderBy().Expand().Count().SetMaxTop(100));

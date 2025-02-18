@@ -18,5 +18,9 @@ public class MappingProfile : Profile
             .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.FullName)) // Map FullName to Name
             .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email)); // Map Email to Email
 
+        CreateMap<Course, CourseViewModel>();
+        
+        CreateMap<Student, StudentViewModel>();
+
     }
 }
